@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AIM 8 - CSS Selectors</title>
+
+    <style>
+        * {
+            font-family: Arial;
+        }
+
+        h1, h2 {
+            text-align: center;
+            color: navy;
+        }
+
+        .highlight {
+            background-color: lightyellow;
+            border-left: 4px solid orange;
+            padding: 5px;
+        }
+
+        #special {
+            color: darkred;
+            font-weight: bold;
+        }
+
+        div p {
+            color: darkgreen;
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Understanding CSS Selectors</h1>
+    <h2>Different Types of Selectors</h2>
+
+    <p class="highlight">This paragraph uses a <b>class selector</b>.</p>
+
+    <p id="special">This paragraph uses an <b>ID selector</b>.</p>
+
+    <div>
+        <p>This text is styled by a <b>descendant selector</b> (p inside div).</p>
+    </div>
+
+    <footer>
+        <p class="highlight">Created by Rupali | Web Development Practical</p>
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Manipulation Demo</title>
+</head>
+<body>
+
+    <h2 id="title">Welcome Message</h2>
+    <p class="message">Click the button to change this text.</p>
+
+    <button id="changeBtn">Click Me</button>
+
+    <script>
+        
+        document.addEventListener("DOMContentLoaded", function() {
+
+            let button = document.getElementById("changeBtn");
+
+            
+            button.addEventListener("click", function() {
+
+                
+                let name = prompt("Enter your name:");
+
+                    if (name) {
+                    
+                    document.getElementById("title").innerHTML =
+                        "Hello, " + name + "! 👋";
+
+                    
+                    let msg = document.querySelector(".message");
+                    msg.innerHTML = "This text was changed using DOM manipulation!";
+                    msg.style.color = "blue"; 
+                    msg.style.fontWeight = "bold";
+                } else {
+                    alert("You didn't enter a name!");
+                }
+
+            });
+
+        });
+    </script>
+
+</body>
+</html>

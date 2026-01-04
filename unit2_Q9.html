@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AIM 9 - Responsive Web Page</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+            padding: 0;
+            background-color: lightblue;
+        }
+        header {
+            background-color: navy;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+        }
+        .content {
+            padding: 1rem;
+            text-align: center;
+        }
+        .box {
+            background-color: white;
+            border: 2px solid black;
+            border-radius: 10px;
+            padding: 1rem;
+            margin: 1rem auto;
+            width: 90%;
+            max-width: 400px;
+        }
+
+        footer {
+            text-align: center;
+            background-color: navy;
+            color: white;
+            padding: 0.8rem;
+        }
+
+        @media (min-width: 600px) {
+            body {
+                background-color: lightyellow;
+            }
+            .box {
+                width: 70%;
+                max-width: 600px;
+            }
+        }
+        
+        @media (min-width: 900px) {
+            body {
+                background-color: lightgreen;
+            }
+
+            .box {
+                width: 50%;
+                max-width: 800px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Responsive Web Design</h1>
+    </header>
+
+    <div class="content">
+        <div class="box">
+            <h2>Flexible & Mobile-First</h2>
+            <p>
+                This page adjusts itself based on the device screen size.  
+                Try resizing the window — colors and layout will change!
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        Created by Rupali | Web Development Practical
+    </footer>
+
+</body>
+</html>

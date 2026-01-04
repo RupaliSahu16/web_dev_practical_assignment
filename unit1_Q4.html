@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>AIM 4 - Food Ordering Form</title>
+</head>
+
+<body style="font-family: Arial; background-color: honeydew; color: darkgreen;">
+
+    <h1 style="text-align:center; color: darkred;">🍕 Food Ordering Form 🍔</h1>
+    <p style="text-align:center;">Fill out the form below to place your delicious order!</p>
+
+    <form style="width: 300px; margin: auto; background-color: white; padding: 20px; border: 2px solid green; border-radius: 10px;">
+
+
+        <label><b>Full Name:</b></label><br>
+        <input type="text" name="name" placeholder="Enter your name" required><br><br>
+
+        <label><b>Phone Number:</b></label><br>
+        <input type="text" name="phone" placeholder="Enter your number" required><br><br>
+
+        
+        <b>Choose Meal Type:</b><br>
+        <input type="radio" name="meal" value="Veg"> Veg<br>
+        <input type="radio" name="meal" value="Non-Veg"> Non-Veg<br><br>
+
+    
+        <b>Select Your Items:</b><br>
+        <input type="checkbox" name="food" value="Pizza"> Pizza<br>
+        <input type="checkbox" name="food" value="Burger"> Burger<br>
+        <input type="checkbox" name="food" value="Pasta"> Pasta<br>
+        <input type="checkbox" name="food" value="Fries"> Fries<br><br>
+
+        
+        <b>Select Drink:</b><br>
+        <select name="drink">
+            <option>--Choose a drink--</option>
+            <option>Coke</option>
+            <option>Cold Coffee</option>
+            <option>Juice</option>
+            <option>Water</option>
+        </select><br><br>
+
+        <!-- Buttons -->
+        <input type="submit" value="Place Order" style="background-color: lightgreen; border: none; padding: 8px;">
+        <input type="reset" value="Clear Form" style="background-color: lightcoral; border: none; padding: 8px;">
+    </form>
+
+    <footer style="text-align:center; margin-top:20px; color: gray;">
+        Created by Rupali | Web Development Practical
+    </footer>
+
+</body>
+</html>

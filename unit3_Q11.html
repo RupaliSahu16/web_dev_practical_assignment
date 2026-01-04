@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            my calculator
+        </title>
+        <style>
+            body{background-color: rgb(248, 216, 234);
+                color: black;
+                font-size:30px;
+                border :5px solid black;
+                text-align:center;
+                -moz-box-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <p> this is your desired result after performing the operation ....</p>
+
+        <script>
+            let op= prompt("enter the operator:");
+            let num1=parseInt(prompt("enter 1st number:"));
+            let num2=parseInt(prompt("enter 2nd number:"));
+            switch(op){
+                case "+": document.write("sum = ",num1+num2);
+                break;
+                case "-": document.write("Difference = ",num1-num2);
+                break;
+                case "*": document.write("Product = ",num1*num2);
+                break;
+                case "/": document.write("Division = ",num1/num2);
+                break;
+                default: document.write("sorry cant process");
+
+            }
+
+        </script>
+    </body>
+</html>

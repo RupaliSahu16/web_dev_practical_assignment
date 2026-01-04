@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Canvas Drawing Example</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #f0f0f0;
+            margin: 0;
+        }
+        canvas {
+            border: 2px solid #333;
+        }
+    </style>
+</head>
+<body>
+
+<canvas id="myCanvas" width="400" height="300"></canvas>
+
+<script>
+    const canvas = document.getElementById("myCanvas");
+    const ctx = canvas.getContext("2d");
+
+    
+    ctx.fillStyle = "#ff6b6b"; 
+    ctx.fillRect(20, 20, 100, 60); 
+
+    
+    ctx.beginPath();
+    ctx.arc(200, 70, 40, 0, Math.PI * 2); 
+    ctx.fillStyle = "#4ecdc4"; 
+    ctx.fill();
+    ctx.closePath();
+
+
+    ctx.beginPath();
+    ctx.moveTo(50, 200); 
+    ctx.lineTo(150, 20);
+    ctx.lineTo(100, 120); 
+    ctx.closePath();
+    ctx.fillStyle = "#ffe66d"; 
+    ctx.fill();
+
+    
+    ctx.strokeStyle = "#1a535c"; 
+    ctx.lineWidth = 3;
+    ctx.strokeRect(220, 150, 120, 80); 
+
+    
+    ctx.beginPath();
+    ctx.moveTo(0, 0);
+    ctx.lineTo(400, 300);
+    ctx.strokeStyle = "#ff6b6b";
+    ctx.lineWidth = 2;
+    ctx.stroke();
+</script>
+
+</body>
+</html>

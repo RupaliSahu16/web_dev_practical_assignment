@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Listener Demo</title>
+    <style>
+        #box {
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+            text-align: center;
+            line-height: 100px;
+            margin: 20px 0;
+            font-weight: bold;
+            transition: background-color 0.3s;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Event Listener Demo</h2>
+    <p>Click, hover, or press keys to interact!</p>
+
+    <div id="box">Hover or Click Me!</div>
+    <button id="removeBtn">Remove Click Event</button>
+
+    <script>
+        const box = document.getElementById("box");
+        const removeBtn = document.getElementById("removeBtn");
+
+        
+        function changeColorOnHover() {
+            box.style.backgroundColor = "lightgreen";
+            box.innerHTML = "Mouse Over!";
+        }
+
+        function resetColor() {
+            box.style.backgroundColor = "lightblue";
+            box.innerHTML = "Hover or Click Me!";
+        }
+
+        function boxClicked() {
+            alert("You clicked the box!");
+        }
+
+        box.addEventListener("mouseover", changeColorOnHover);
+        box.addEventListener("mouseout", resetColor);
+        box.addEventListener("click", boxClicked);
+
+        
+        removeBtn.addEventListener("click", function() {
+            box.removeEventListener("click", boxClicked);
+            alert("Click event removed! Now box won't alert on click.");
+        });
+
+        
+        document.addEventListener("keydown", function(event) {
+            if(event.key === "r" || event.key === "R") {
+                box.style.backgroundColor = "red";
+                box.innerHTML = "Red activated!";
+            }
+            if(event.key === "b" || event.key === "B") {
+                box.style.backgroundColor = "blue";
+                box.innerHTML = "Blue activated!";
+            }
+        });
+
+        document.addEventListener("keyup", function() {
+            box.style.backgroundColor = "lightblue";
+            box.innerHTML = "Hover or Click Me!";
+        });
+    </script>
+
+</body>
+</html>

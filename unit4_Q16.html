@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Show/Hide and Toggle CSS Demo</title>
+    <style>
+        
+        .hidden {
+            display: none;
+        }
+
+        
+        .highlight {
+            color: white;
+            background-color: green;
+            font-weight: bold;
+            padding: 5px;
+        }
+
+        
+        .fancy {
+            font-size: 18px;
+            color: purple;
+        }
+    </style>
+</head>
+<body>
+
+    <h2 id="heading">Hello, Visitor!</h2>
+    <p id="para" class="fancy">This paragraph can be shown or hidden, and styled dynamically.</p>
+
+    
+    <button id="toggleBtn">Show/Hide Paragraph</button>
+    <button id="highlightBtn">Toggle Highlight</button>
+
+    <script>
+        
+        document.addEventListener("DOMContentLoaded", function() {
+
+        
+            const para = document.getElementById("para");
+            const heading = document.getElementById("heading");
+
+            const toggleBtn = document.getElementById("toggleBtn");
+            const highlightBtn = document.getElementById("highlightBtn");
+
+            
+            toggleBtn.addEventListener("click", function() {
+                para.classList.toggle("hidden");
+            });
+
+            
+            highlightBtn.addEventListener("click", function() {
+                heading.classList.toggle("highlight");
+            });
+
+        });
+    </script>
+
+</body>
+</html>

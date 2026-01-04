@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript Functions and Scope</title>
+</head>
+<body>
+
+    <h2>User-Defined Functions & Scope Demo</h2>
+
+    <label>Enter first number:</label>
+    <input type="number" id="num1"><br><br>
+
+    <label>Enter second number:</label>
+    <input type="number" id="num2"><br><br>
+
+    <button onclick="mainFunction()">Run Program</button>
+
+    <h3>Output:</h3>
+    <pre id="output"></pre>
+
+    <script>
+        
+        var globalVar = "I am a global var";
+
+        function addNumbers(a, b) {
+            return a + b;
+        }
+
+        function scopeDemo() {
+            let result = "";
+
+            if (true) {
+                var x = 10;      // function scope
+                let y = 20;      // block scope
+                const z = 30;    // block scope
+
+                result += "Inside block:\n";
+                result += "x = " + x + "\n";
+                result += "y = " + y + "\n";
+                result += "z = " + z + "\n\n";
+            }
+
+            result += "Outside block:\n";
+            result += "x = " + x + "\n";
+            result += "y and z are not accessible (block scope)\n\n";
+
+            return result;
+        }
+
+        function mainFunction() {
+            let a = Number(document.getElementById("num1").value);
+            let b = Number(document.getElementById("num2").value);
+
+            let output = "";
+
+            
+            let sum = addNumbers(a, b);
+            output += "Sum using user-defined function: " + sum + "\n\n";
+
+            
+            output += scopeDemo();
+
+            
+            output += "Global variable:\n";
+            output += globalVar;
+
+            document.getElementById("output").textContent = output;
+        }
+    </script>
+
+</body>
+</html>

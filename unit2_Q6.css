@@ -1,0 +1,15 @@
+article {
+    background-color: #fff3cd;
+    border: 2px solid #ffb703;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+aside {
+    background-color: #d4edda;
+    border-left: 4px solid #28a745;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 8px;
+}

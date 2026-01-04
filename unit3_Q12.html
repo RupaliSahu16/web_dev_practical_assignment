@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Conditional Statements and Loops Demo</title>
+</head>
+<body>
+
+    <h2>JavaScript Conditional Statements and Loops</h2>
+
+    <label>Enter your marks:</label>
+    <input type="number" id="marks">
+    <br><br>
+
+    <label>Enter a number for loops:</label>
+    <input type="number" id="number">
+    <br><br>
+
+    <button onclick="runProgram()">Submit</button>
+
+    <h3>Output:</h3>
+    <pre id="output"></pre>
+
+    <script>
+        function runProgram() {
+            let marks = Number(document.getElementById("marks").value);
+            let n = Number(document.getElementById("number").value);
+            let result = "";
+
+            
+            if (marks >= 90) {
+                result += "Grade: A\n";
+            } else if (marks >= 60) {
+                result += "Grade: B\n";
+            } else {
+                result += "Grade: C\n";
+            }
+
+            // For Loop
+            result += "\nFor Loop Output:\n";
+            for (let i = 1; i <= n; i++) {
+                result += i + " ";
+            }
+
+            // While Loop
+            result += "\n\nWhile Loop Output:\n";
+            let count = 1;
+            while (count <= n) {
+                result += count + " ";
+                count++;
+            }
+
+            // Do-While Loop
+            result += "\n\nDo-While Loop Output:\n";
+            let num = 1;
+            do {
+                result += num + " ";
+                num++;
+            } while (num <= n);
+
+            document.getElementById("output").textContent = result;
+        }
+    </script>
+
+</body>
+</html>
